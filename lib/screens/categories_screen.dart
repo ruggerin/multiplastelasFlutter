@@ -2,14 +2,10 @@ import 'package:flutter/material.dart';
 import '../components/category_item.dart';
 import '../data/dummy_data.dart';
 
-class CategoriesScrean extends StatelessWidget{
+class CategoriesScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title:  Text('Vamos Cozinhar?',  ),
-        ),
-        body:GridView(
+    return GridView(
           padding: const EdgeInsets.all(25),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
@@ -23,9 +19,7 @@ class CategoriesScrean extends StatelessWidget{
               return CategoryItem(e);
             }
           ).toList()
-
-        )
-    );
+    ) ;
   }
   
 }
